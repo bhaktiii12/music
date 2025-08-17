@@ -1,0 +1,143 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #222;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.player {
+  background: #333;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  width: 320px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
+}
+
+.controls button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.progress-container {
+  background: #555;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 8px;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.progress {
+  background: #ff4757;
+  height: 8px;
+  width: 0%;
+  border-radius: 5px;
+}
+
+/* Playlist */
+.playlist {
+  margin-top: 15px;
+  background: #444;
+  border-radius: 10px;
+  padding: 10px;
+  max-height: 150px;
+  overflow-y: auto;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+}
+
+.playlist div {
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.playlist div:hover {
+  background: #555;
+}
+
+.playlist .active {
+  background: #ff4757;
+  color: #fff;
+}
+
+/* Hide playlist initially */
+.hidden {
+  display: none;
+}
+
+.toggle-btn {
+  margin-top: 10px;
+  background: #ff4757;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.toggle-btn:hover {
+  background: #ff6b81;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 600px) {
+  .player {
+    width: 90%;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 14px;
+  }
+
+  .controls button {
+    font-size: 20px;
+    margin: 6px;
+  }
+
+  .toggle-btn {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .playlist {
+    max-height: 120px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .controls button {
+    font-size: 18px;
+    margin: 5px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  h4 {
+    font-size: 12px;
+  }
+
+  .playlist {
+    max-height: 100px;
+    font-size: 12px;
+  }
+}
